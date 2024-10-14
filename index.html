@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>עולם הציורים</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="side-panel left-panel">
+            <div class="app-header">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" fill="#1473E6"/>
+                    <path d="M20 40 Q40 20 60 40 T80 60" stroke="white" stroke-width="4" fill="none"/>
+                    <circle cx="30" cy="30" r="5" fill="white"/>
+                    <circle cx="50" cy="30" r="5" fill="white"/>
+                    <path d="M30 50 Q40 60 50 50" stroke="white" stroke-width="4" fill="none"/>
+                </svg>
+                <h1>עולם הציורים</h1>
+            </div>
+            <div class="panel-section">
+                <div class="panel-title">הגדרות</div>
+                <div class="toggle-container">
+                    <span>מצב לילה</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="toggle-container">
+                    <span>הקראה</span>
+                    <label class="switch">
+                        <input type="checkbox" id="speech-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="panel-section">
+                <div class="panel-title">מצבי משחק</div>
+                <button id="mode-guided">מצב מודרך</button>
+                <button id="mode-complete-drawing">השלם את הציור</button>
+                <button id="mode-timed">צייר לפי זמן</button>
+                <button id="mode-free">ציור חופשי</button>
+                <button id="end-current-mode">סיים מצב נוכחי</button>
+            </div>
+            <div class="panel-section">
+                <div class="panel-title">קטגוריות</div>
+                <button id="category-animals">חיות</button>
+                <button id="category-vehicles">כלי תחבורה</button>
+                <button id="category-food">מאכלים</button>
+            </div>
+            <div class="panel-section">
+                <div class="panel-title">צבעים</div>
+                <div id="color-picker"></div>
+            </div>
+            <div class="panel-section">
+                <div class="panel-title">מדבקות</div>
+                <div id="sticker-palette"></div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="message-container">
+                <div id="hint"></div>
+                <div id="message"></div>
+            </div>
+            <div id="canvas-container">
+                <canvas id="drawing-canvas"></canvas>
+            </div>
+        </div>
+        <div class="side-panel right-panel">
+            <div class="panel-section">
+                <div class="panel-title">ניקוד</div>
+                <div id="score">0</div>
+                <div id="high-score">שיא: 0</div>
+            </div>
+            <!-- ... (תוכן נוסף לפאנל הימני) ... -->
+        </div>
+    </div>
+    <div class="copyright">זכויות יוצרים © רומי & עילי 2024</div>
+    <script src="app.js"></script>
+</body>
+</html>
